@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pie</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            background-color: aqua;
+        }
+        footer {
+            background-color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            display: flex; /*Ocupa el espacio necesario*/
+            flex-wrap: wrap; /*Si es necesario se rompe la condición*/
+            padding: 20px;
+        }
+        footer h2 {
+            font-size: 1.1em;
+        }
+        #aviso {
+            width: 80%;
+            padding-right: 20px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        #redes {
+            width: 20%;
+            text-align: right;
+        }
+        #copyright {
+            width: 100%;
+            text-align: center;
+            border-top: 2px solid white;
+            padding-top: 10px;
+        }
+        @media (max-width: 600px){ /*moviles*/
+            body {
+                background-color: blue;
+            }
+            footer {
+                display: block; /*con esto va abajo*/
+            }
+            #aviso,#redes,#copyright {
+                width: 100%;
+                text-align: center;
+            }
+            #redes {
+                padding-bottom: 20px;
+            }
+        }
+        @media (min-width:601px) and (max-width:780px) { /*tablets*/
+            body {
+                background-color: orange;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <footer> <!--podemos crear section en lugar de div-->
+        <div id="aviso">
+            <h2>Aviso</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ad laborum a facilis, aut ullam placeat quod impedit recusandae expedita saepe rem accusamus ipsam ipsa fuga minus animi tenetur esse! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptate aut aliquid, porro provident quod ducimus quasi dolores aliquam, praesentium sed iure laborum eius minima nobis ea, quia ut tempore?</p>
+        </div>
+        <div id="redes">
+            <h2>Enlaces</h2>
+            <p>Twitter</p>
+            <p>Facebook</p>
+            <p>Instagram</p>
+        </div>
+        <div id="copyright">
+            &copy; IES Virrey Morcillo 2024
+        </div>
+    </footer>
+</body>
+</html>
